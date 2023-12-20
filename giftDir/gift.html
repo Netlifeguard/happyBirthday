@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+            background: linear-gradient(135deg, #FFD700, #FF69B4, #87CEEB, #FF6347);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+        audio{
+            position: absolute;
+            top:20px;
+            left: 45%;
+            margin: auto;
+        }
+        .word{
+            top:0;
+            left: 0;
+            color: blue;
+            width: 50px;
+            height: 60px;
+        }
+        section {
+            width: 270px;
+            height: 320px;
+            position: relative;
+            margin: 200px auto;
+            animation: mua 20s linear infinite;
+            /*linear 控制速度是匀速运动*/
+            transform-style: preserve-3d;
+            background: url(./photo/sheng.jpg) no-repeat;
+            background-size: 270px 320px;
+        }
+
+        section img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        section img:nth-child(1) {
+            transform: rotateY(0deg) translateZ(400px);
+        }
+
+        section img:nth-child(2) {
+            transform: rotateY(60deg) translateZ(400px);
+        }
+
+        section img:nth-child(3) {
+            transform: rotateY(120deg) translateZ(400px);
+        }
+
+        section img:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+
+        section img:nth-child(5) {
+            transform: rotateY(240deg) translateZ(400px);
+        }
+
+        section img:nth-child(6) {
+            transform: rotateY(300deg) translateZ(400px);
+        }
+
+        @keyframes mua {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+    /*    ------------------------*/
+        .fu {
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            animation: dfc 0.1s linear infinite, gun 10s forwards;
+            top: 0; /* 修改这里 */
+            left: 0;  /* 修改这里 */
+        }
+        .fu2 {
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            animation: dfc 1s linear infinite, gun 10s forwards;
+            top: 800px; /* 修改这里 */
+            left: 0;  /* 修改这里 */
+        }
+        .fu3 {
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            animation: dfc 1.5s linear infinite, gun2 10s forwards;
+            top: 0; /* 修改这里 */
+            left: 0;  /* 修改这里 */
+        }
+        .fu4 {
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            animation: dfc 0.1s linear infinite, gun2 10s forwards;
+            top: 800px; /* 修改这里 */
+            left: 0;  /* 修改这里 */
+        }
+        .fu5 {
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            animation: dfc 1s linear infinite, gun3 10s forwards;
+            top: 450px; /* 修改这里 */
+            left: 0;  /* 修改这里 */
+        }
+        .fu6 {
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            animation: dfc 1s linear infinite, gun4 5s forwards;
+            top: 450px; /* 修改这里 */
+            left: 0;  /* 修改这里 */
+        }
+        .gongt {
+            width: 0;
+            height: 0;
+            left: 20px;
+        }
+
+        .shang {
+            border-top: 80px solid transparent;
+            border-bottom: 0px solid rgb(28, 216, 75);
+            border-left: 80px solid rgb(89, 34, 177);
+            border-right: 0px solid blue;
+            float: left;
+        }
+
+        .you {
+            border-top: 80px solid red;
+            border-bottom: 0px solid rgb(28, 216, 75);
+            border-left: 0px solid rgb(89, 34, 177);
+            border-right: 80px solid transparent;
+            float: left;
+        }
+
+        .xia {
+
+            border-top: 80px solid transparent;
+            border-bottom: 0px solid rgb(28, 216, 75);
+            border-left: 0px solid rgb(89, 34, 177);
+            border-right: 80px solid rgb(23, 218, 33);
+            float: left;
+        }
+
+        .zuo {
+            border-top: 80px solid rgb(218, 28, 192);
+            border-bottom: 0px solid rgb(28, 216, 75);
+            border-left: 80px solid transparent;
+            border-right: 0px solid black;
+            float: left;
+        }
+
+        @keyframes dfc {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes gun {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 25%;
+            }
+        }
+        @keyframes gun2 {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 75%;
+            }
+        }
+        @keyframes gun3 {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 8%;
+            }
+        }
+        @keyframes gun4 {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 85%;
+            }
+        }
+    /*---------------------*/
+        .one{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 75px;
+            font-style: italic;
+            color: #e10098;
+        }
+        .two{
+            position: absolute;
+            top: 100px;
+            left: 0;
+            font-size: 75px;
+            font-style: italic;
+            color: #e10098;
+        }
+    </style>
+</head>
+
+<body >
+<audio src="photo/birth.mp3" autoplay loop preload controls>
+</audio>
+<h2 class="one">Happy</h2>
+<h2 class="two">Birthday!</h2>
+<h1 class="word">快乐加倍</h1>
+    <section>
+        <img src="./photo/sheng.jpg" alt="">
+        <img src="./photo/c4.jpg" alt="">
+        <img src="./photo/c1.jpg" alt="">
+        <img src="./photo/c2.jpg" alt="">
+        <img src="./photo/c5.jpg" alt="">
+        <img src="./photo/c3.jpg" alt="">
+    </section>
+<!--    ------------------>
+    <div class="fu">
+        <div class="shang gongt"></div>
+        <div class="you gongt"></div>
+        <div class="xia gongt"></div>
+        <div class="zuo gongt"></div>
+    </div>
+    <div class="fu2">
+        <div class="shang gongt"></div>
+        <div class="you gongt"></div>
+        <div class="xia gongt"></div>
+        <div class="zuo gongt"></div>
+    </div>
+    <div class="fu3">
+        <div class="shang gongt"></div>
+        <div class="you gongt"></div>
+        <div class="xia gongt"></div>
+        <div class="zuo gongt"></div>
+    </div>
+    <div class="fu4">
+        <div class="shang gongt"></div>
+        <div class="you gongt"></div>
+        <div class="xia gongt"></div>
+        <div class="zuo gongt"></div>
+    </div>
+<!---------->
+<div class="fu5">
+    <div class="shang gongt"></div>
+    <div class="you gongt"></div>
+    <div class="xia gongt"></div>
+    <div class="zuo gongt"></div>
+</div>
+<div class="fu6">
+    <div class="shang gongt"></div>
+    <div class="you gongt"></div>
+    <div class="xia gongt"></div>
+    <div class="zuo gongt"></div>
+</div>
+</body>
+
+</html>
